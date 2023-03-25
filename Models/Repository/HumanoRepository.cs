@@ -2,42 +2,42 @@
 
 namespace Sithec2023.Models.Repository
 {
-    public class AlumnoRepository:IAlumnoRepository
+    public class HumanoRepository:IHumanoRepository
     {
         private readonly ApplicationDbContext _context;
 
-        public AlumnoRepository(ApplicationDbContext context)
+        public HumanoRepository(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public async Task<Alumno> AddAlumno(Alumno alumno)
+        public async Task<Humano> AddHumano(Humano alumno)
         {
             _context.Add(alumno);
             await _context.SaveChangesAsync();
             return alumno;
         }
 
-        public async Task DeleteAlumno(Alumno alumno)
+        public async Task DeleteHumano(Humano alumno)
         {
-            _context.Alumnos.Remove(alumno);
+            _context.Humanos.Remove(alumno);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Alumno> GetAlumno(int id)
+        public async Task<Humano> GetHumano(int id)
         {
-            return await _context.Alumnos.FindAsync(id);
+            return await _context.Humanos.FindAsync(id);
         }
 
-        public async Task<List<Alumno>> GetListAlumnos()
+        public async Task<List<Humano>> GetListHumanos()
         {
-            return await _context.Alumnos.ToListAsync();
+            return await _context.Humanos.ToListAsync();
 
         }
 
-        public async Task UpdateAlumno(Alumno alumno)
+        public async Task UpdateHumano(Humano alumno)
         {
-            var alumnoItem = await _context.Alumnos.FirstOrDefaultAsync(x => x.Id == alumno.Id);
+            var alumnoItem = await _context.Humanos.FirstOrDefaultAsync(x => x.Id == alumno.Id);
 
             if (alumnoItem != null)
             {

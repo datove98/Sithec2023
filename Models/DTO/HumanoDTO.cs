@@ -1,6 +1,6 @@
-﻿namespace Sithec2023.Models
+﻿namespace Sithec2023.Models.DTO
 {
-    public class Alumno
+    public class HumanoDTO
     {
         public int Id { get; set; }
         public string? Nombre { get; set; }

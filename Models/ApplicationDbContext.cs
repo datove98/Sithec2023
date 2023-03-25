@@ -11,9 +11,9 @@ namespace Sithec2023.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Alumno>().HasKey(a => a.Id);
+            modelBuilder.Entity<Humano>().HasKey(a => a.Id);
         }
 
-        public DbSet<Alumno> Alumnos { get; set; }
+        public DbSet<Humano> Humanos { get; set; }
     }
 }

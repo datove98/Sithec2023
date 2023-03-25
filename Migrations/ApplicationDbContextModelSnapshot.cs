@@ -21,7 +21,7 @@ namespace Sithec2023.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Sithec2023.Models.Alumno", b =>
+            modelBuilder.Entity("Sithec2023.Models.Humano", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -46,7 +46,7 @@ namespace Sithec2023.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Alumnos");
+                    b.ToTable("Humanos");
                 });
 #pragma warning restore 612, 618
         }
