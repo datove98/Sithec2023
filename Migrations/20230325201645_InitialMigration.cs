@@ -4,12 +4,12 @@
 
 namespace Sithec2023.Migrations
 {
-    public partial class AddClaseAlumno : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Alumnos",
+                name: "Humanos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -22,14 +22,14 @@ namespace Sithec2023.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Alumnos", x => x.Id);
+                    table.PrimaryKey("PK_Humanos", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Alumnos");
+                name: "Humanos");
         }
     }
 }

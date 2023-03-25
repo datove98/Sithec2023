@@ -1,6 +1,6 @@
 ﻿namespace Sithec2023.Models
 {
-    public class Alumno
+    public class Humano
     {
         public int Id { get; set; }
         public string? Nombre { get; set; }
