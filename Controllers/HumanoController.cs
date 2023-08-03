@@ -60,6 +60,22 @@ namespace Sithec2023.Controllers
             
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetTodos()
+        {
+            try
+            {
+                var listHumanos = await _humanoRepository.GetListHumanos();
+                var listHumanosDTO = _mapper.Map<IEnumerable<HumanoDTO>>(listHumanos);
+                return Ok(listHumanos);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
