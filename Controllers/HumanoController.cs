@@ -61,7 +61,7 @@ namespace Sithec2023.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetTodos()
         {
             try
             {
